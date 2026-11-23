@@ -1,0 +1,95 @@
+{
+  "track": "cv",
+  "model": "yolo26s.pt",
+  "revision": "ultralytics==8.4.216; sha256=646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+  "dataset": "Thermal Person Detector, https://huggingface.co/datasets/Voxel51/Thermal-Person-Detector (исходно Roboflow smart2/persondection-61bc2), CC BY 4.0",
+  "classes": [
+    "person"
+  ],
+  "n_train": 3000,
+  "n_val": 1317,
+  "n_test": 1317,
+  "params_total": 10009784,
+  "baseline": {
+    "split": "test",
+    "coco_map50": 0.5324171506720643,
+    "heuristic_map50": 0.03228048863485944,
+    "heuristic_ap50_per_class": {
+      "person": 0.03228048863485944
+    }
+  },
+  "final": {
+    "split": "test",
+    "map50": 0.9393244349383004,
+    "map50_95": 0.6782185051649507,
+    "precision": 0.9328789877648127,
+    "recall": 0.8670798898071626,
+    "per_class": {
+      "person": {
+        "ap50": 0.9393244349383004,
+        "ap50_95": 0.6782185051649507,
+        "precision": 0.9328789877648127,
+        "recall": 0.8670798898071626
+      }
+    },
+    "map50_own": 0.9408247973561022
+  },
+  "ablation": {
+    "param": "imgsz",
+    "values": [
+      640,
+      320
+    ],
+    "val_map50": [
+      0.9192448193233469,
+      0.8950292405408444
+    ],
+    "val_map50_95": [
+      0.6579470795574824,
+      0.6219355765501751
+    ],
+    "val_recall": [
+      0.8329764453961456,
+      0.8062098501070664
+    ],
+    "train_time_sec": [
+      1827.3206018320002,
+      787.258357828
+    ],
+    "latency_ms": [
+      15.036872340006084,
+      9.927140160025374
+    ]
+  },
+  "errors": {
+    "tp": 2450,
+    "class": 0,
+    "localization": 88,
+    "background": 247,
+    "missed": 286
+  },
+  "device": "Tesla T4",
+  "train_time_sec": 1827.3206018320002,
+  "fast_mode": false,
+  "train_args": {
+    "epochs": 30,
+    "imgsz": 640,
+    "batch": 16,
+    "seed": 0,
+    "deterministic": true,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "cos_lr": true,
+    "patience": 10,
+    "hsv_h": 0.0,
+    "hsv_s": 0.0,
+    "hsv_v": 0.3,
+    "fliplr": 0.5,
+    "flipud": 0.0
+  },
+  "run_times": {
+    "heuristic": 10.59781278500003,
+    "train": 1827.3206018320002,
+    "ablation": 787.258357828
+  }
+}
