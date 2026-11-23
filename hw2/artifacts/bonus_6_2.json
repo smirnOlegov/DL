@@ -1,0 +1,20 @@
+{
+  "yolo26s": {
+    "params": 10009784,
+    "train_min": 30.5,
+    "latency_ms": 15.2,
+    "val mAP50": 0.9192,
+    "val mAP50-95": 0.6579,
+    "test mAP50": 0.9393,
+    "test mAP50-95": 0.6782
+  },
+  "rtdetr-l": {
+    "params": 32970476,
+    "train_min": 110.7,
+    "latency_ms": 68.14,
+    "val mAP50": 0.9172,
+    "val mAP50-95": 0.66,
+    "test mAP50": 0.9266,
+    "test mAP50-95": 0.6742
+  }
+}
